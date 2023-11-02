@@ -1,4 +1,4 @@
-# Studencka aplikacja lotniska React Projekt Zespołowy 2022
+# Studencka aplikacja lotniska React Projekt Zespołowy 2022-2023
 Moim głównym zadaniem podczas pracy nad projektem było zaprojektowanie i obsługa Baru Podniebnego:
 
 
