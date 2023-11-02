@@ -1,1 +1,1 @@
-# Studencka aplikacja lotniska Projekt Zespołowy 2022
+# Studencka aplikacja lotniska React Projekt Zespołowy 2022
