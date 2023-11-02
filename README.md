@@ -1,5 +1,5 @@
 # Studencka aplikacja lotniska React Projekt Zespołowy 2022
-Moją częscią projektu było zaprojektowanie i obsługa Baru Podniebnego:
+Moim głównym zadaniem podczas pracy nad projektem było zaprojektowanie i obsługa Baru Podniebnego:
 
 
 1 Strona baru - Wyświetla listę produktów, dla użytkowników zalogowanych umożliwia dodanie produktu do koszyka, dla użytkowników z prawami administratora umożliwia edycję i usunięcie produktów. Lista produktów wczytywana jest z zewnętrznej bazy danych MySQL.
