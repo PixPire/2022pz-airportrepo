@@ -1,0 +1,17 @@
+[
+    {
+     "id": 1,
+     "question": "W ktorym roku powstało lotnisko?",
+     "answer": "W 2022 z inicjatywy Krzysztofa Kononowicza, honorowego obywatela Białegostoku"
+    },
+    {
+     "id": 2,
+     "question": "Jakie opcje płatności są dostępne na lotnisku?",
+     "answer": "Obecnie można płacić: gotówką, kartą i blikiem"
+    },
+    {
+     "id": 3,
+     "question": "Czego nie można wnosić na pokład samolotu i teren lotniska?",
+     "answer": "Broni, noży, gum do żucia, alkoholu i dywanów"
+    }
+]

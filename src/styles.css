@@ -1,0 +1,374 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: #e9eff7;
+    padding-bottom: 100px;
+}
+
+.container{
+    margin: 1rem;
+    text-align: center;
+}
+nav {
+  background-color: lightblue;
+  border-radius: 10px;
+}
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+    color:black;
+    margin-right:20px;
+}
+.input:invalid{
+  border: 3px solid red;
+}
+.menus {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  margin: 0 10px;
+}
+
+.menu-item a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.menu-item:hover {
+  background-color: #555;
+  border-radius: 10px;
+}
+
+.menu-item ul {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: #333;
+  padding: 0;
+  margin: 0;
+  border-radius: 10px;
+  z-index: 1;
+  display: none;
+}
+
+.menu-item:hover ul {
+  display: block;
+}
+
+.submenu-item a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+.ticket-box{
+  background-color: lightgrey;
+  border-radius: 15px;
+  border-width: 10px;
+  border-color: lightblue;
+  border-style:solid;
+  text-align: center;
+  margin-top: 10px;
+  padding-bottom: 100px;
+}
+.ticket-box2{
+  text-align: left;
+  font-size: large;
+ display:flex;
+ flex-direction: row;
+ justify-content: space-between;
+ padding-top: 50px;
+}
+
+
+
+.flightList{
+    background-color: #0147ab;
+    margin:0 300px;
+    border-radius: 20px;
+    border-style: solid;
+}
+
+.flightInstance{
+    background-color: #82eefd;
+    margin: 0 100px;
+    border-radius: 10px;
+    border-style: solid;
+    padding:10px
+}
+.left-to-right{
+
+  display: flex;                  
+  flex-direction: row;           
+  flex-wrap: nowrap;              
+  justify-content: space-between;
+  
+}
+.user-container{
+  
+    width: 40%;
+    height:80%;
+    padding: 40px;
+    border-radius: 8px;
+    justify-content: center;
+    text-align: center;
+    margin-top:10px;
+    margin-bottom:10px;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgb(0,0,0,0.3);
+   
+    
+}
+.user-container-edit{
+    height:100%;
+    padding: 40px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgb(0,0,0,0.3);
+    width:100%;
+    
+}
+.user-options{
+    display: inline-block;
+    width:30%;
+}
+
+.buttons{
+    border-style: none;
+    border-radius: 5px;
+    background-color: #298ca0;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    box-shadow: 2px 2px 5px rgb(0,0,0,0.2);
+    cursor: pointer;
+
+}
+.photo{
+    background-image: url("./images/airport.jpg");
+    display: flex;
+    border-radius:8px;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+    width: 100%;
+    background-size: cover;
+}
+.inputs{
+    border-radius: 5px;
+    border-color: lightslategrey;
+    width:100%;
+}
+.labels{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: 15px;
+ }
+ .profile-photo{
+    
+    border: 1px solid rgb(12, 10, 119);
+    border-radius: 50%;
+    padding: 5px;
+    width: 500px;
+    height: 300px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+ }
+ .profile-description{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 10px;
+ }
+ .profile-name{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 100px;
+ }
+    table{
+    border:solid;
+ }
+
+ th{
+    font-weight:bold;
+    text-align:center;
+ }
+ tr
+ {
+    border:solid;
+    text-align:center;
+ }
+ col{
+    border: solid;
+ }
+ colgroup
+ {
+    border:solid;
+ }
+.divPilot
+{
+    margin-top:10px;
+    text-align:center;
+    
+}
+.divFaq
+{
+    text-align:center;
+    
+}
+
+ .creator{
+    text-align: center;
+    top: 250px;
+  
+  font-size: 60px;
+  font-weight: 800;
+  color: transparent;
+  background-image: linear-gradient(to right ,#553c9a, #ee4b2b, #00c2cb, #ff7f50, #553c9a);
+  -webkit-background-clip: text;
+  background-clip: text;    
+  background-size: 200%;
+  background-position: -200%;
+  animation: animated-gradient 2s infinite alternate-reverse;    
+
+ }
+ .buttonPilot
+ {
+    width:250px;
+    height: 70px;
+ }
+ button {
+    text-align: center;
+    background-color: lightskyblue; 
+    border-color:blue;
+    border-style: solid;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  textarea
+  {
+    width:250px;
+    height: 70px;
+    padding:10px;
+    border-color:blue;
+    background-color:white; 
+    
+  }
+  select
+  {
+    
+    margin-bottom:52rem;
+    margin-top:5rem;
+    width:250px;
+    height: 50px;
+    padding:10px;
+    border-bottom-style: none;
+    border-color:blue;
+    background-color:white; 
+    
+  }
+  .logoStrony
+  {
+  }
+  footer
+  {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: lightblue;
+    color: black;
+    text-align: center;
+  }
+  
+  input[type=number] {
+ 
+  }
+  .inputTimePilot
+  {
+    width:250px;
+    height: 50px;
+    padding:10px;
+    border-bottom-style: none;
+    border-color:blue;
+    background-color:white;
+  }
+   
+  .inputAdd{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-color:blue;
+    color:#777;
+    background-color:lightskyblue; 
+    box-sizing: border-box; 
+  }
+  
+
+ input[type=text] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-color:blue;
+    color:#777;
+    background-color:lightskyblue; 
+    box-sizing: border-box;
+  }
+  input[type=email] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-color:blue;
+    color:#777;
+    background-color:lightskyblue; 
+    box-sizing: border-box;
+  }
+  input[type=password] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-color:blue;
+    color:#777;
+    background-color:lightskyblue; 
+    box-sizing: border-box;
+  }
+  input[type=datetime-local] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-color:blue;
+    color:#777;
+    background-color:lightskyblue;
+    box-sizing: border-box;
+  }
+ .formM
+ {
+    text-align:center;
+ }
+
+
+  @keyframes animated-gradient{
+    to{
+      background-position: 200%;
+    }
+  }

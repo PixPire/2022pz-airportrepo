@@ -1,0 +1,75 @@
+.item {
+    margin: 1rem;
+    
+  }
+  
+  .image {
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    width: auto;
+  height: 100%;
+    max-width: 300px;
+    max-height: 400px;
+    overflow: hidden;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    
+  }
+  
+  .image img {
+    width: 100%;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .content {
+    text-align: center;
+    padding: 0.5rem;
+  }
+  
+  .actions {
+    padding: 0.5rem;
+    text-align: center;
+  }
+  .actions button {
+    font: inherit;
+    cursor: pointer;
+    color: #048625;
+    border: 1px solid #3c8f5f;
+    background-color: transparent;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+  }
+  
+
+  .list {
+    list-style: none;
+  margin: 0;
+  padding: 0;
+  }
+
+  .card {
+    display: flex; /* Use flexbox to align the image */
+  justify-content: center; /* Align the image horizontally */
+  align-items: center; /* Align the image vertically */
+    box-sizing: content-box;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+
+  
+ 
+  

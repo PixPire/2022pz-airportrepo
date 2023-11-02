@@ -1,0 +1,89 @@
+CREATE TABLE `articles` (
+   `id` int NOT NULL,
+   `title` varchar(20) NOT NULL,
+   `file` mediumblob NOT NULL,
+   `thumbnail` mediumblob,
+   PRIMARY KEY (`id`)
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `asortyment_bar` (
+   `id` int NOT NULL AUTO_INCREMENT,
+   `nazwa` varchar(45) NOT NULL,
+   `cena` double NOT NULL,
+   `image` blob NOT NULL,
+   PRIMARY KEY (`id`)
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `lot` (
+   `id` int NOT NULL AUTO_INCREMENT,
+   `nazwaPrzewoznika` varchar(45) NOT NULL,
+   `czasOdlotu` varchar(45) NOT NULL,
+   `celPodrozy` varchar(45) NOT NULL,
+   `strefaLotu` varchar(45) NOT NULL,
+   PRIMARY KEY (`id`)
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `bilet` (
+   `id` int NOT NULL AUTO_INCREMENT,
+   `lot` int NOT NULL,
+   `start` varchar(45) NOT NULL,
+   `end` varchar(45) NOT NULL,
+   `cena` double NOT NULL,
+   `klasa` varchar(45) NOT NULL,
+   `gate` varchar(45) NOT NULL,
+   `data` date NOT NULL,
+   PRIMARY KEY (`id`),
+   KEY `lot_idx` (`lot`),
+   CONSTRAINT `lot` FOREIGN KEY (`lot`) REFERENCES `lot` (`id`)
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+CREATE TABLE `opoznienia` (
+   `id` int NOT NULL AUTO_INCREMENT,
+   `przyczyna` varchar(50) NOT NULL,
+   `ilosc_godzin` int NOT NULL,
+   `ilosc_minut` int NOT NULL,
+   `opis` varchar(200) DEFAULT NULL,
+   PRIMARY KEY (`id`)
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `pilot` (
+   `id` int NOT NULL AUTO_INCREMENT,
+   `nr_licencji` varchar(45) NOT NULL,
+   `imie` varchar(45) NOT NULL,
+   `nazwisko` varchar(45) NOT NULL,
+   PRIMARY KEY (`id`)
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `samolot` (
+   `id` int NOT NULL AUTO_INCREMENT,
+   `id_pilot` int NOT NULL,
+   `model` varchar(45) NOT NULL,
+   `l_miejsc` int NOT NULL,
+   PRIMARY KEY (`id`),
+   KEY `pilot_idx` (`id_pilot`),
+   CONSTRAINT `pilot` FOREIGN KEY (`id_pilot`) REFERENCES `pilot` (`id`)
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `users` (
+   `id` int NOT NULL AUTO_INCREMENT,
+   `login` varchar(20) NOT NULL,
+   `password` varchar(20) NOT NULL,
+   `role` varchar(20) NOT NULL,
+   `name` varchar(20) DEFAULT NULL,
+   `surname` varchar(20) DEFAULT NULL,
+   `email` varchar(20) DEFAULT NULL,
+   `phone` varchar(10) DEFAULT NULL,
+   `passport` varchar(20) DEFAULT NULL,
+   PRIMARY KEY (`id`)
+ ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `zamowienie` (
+   `id_biletu` int NOT NULL,
+   `id_asortymentu` int NOT NULL,
+   `ilosc` int NOT NULL,
+   KEY `id_asortyment_idx` (`id_asortymentu`) /*!80000 INVISIBLE */,
+   KEY `id_idx` (`id_biletu`),
+   CONSTRAINT `id` FOREIGN KEY (`id_biletu`) REFERENCES `bilet` (`id`),
+   CONSTRAINT `id_asortymentu` FOREIGN KEY (`id_asortymentu`) REFERENCES `asortyment_bar` (`id`)
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
